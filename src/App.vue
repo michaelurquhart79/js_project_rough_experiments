@@ -4,6 +4,7 @@
 
   <p v-for="item in stock_data">{{item.symbol}}</p>
   <button v-on:click="stockgraph">Click me to do stuff</button>
+  <p v-if="toggle">On</p>
 </div>
 </template>
 
@@ -22,7 +23,8 @@ export default {
       // api_key: "4CDV35QACU2KPB3U"
       chart_data: [10, 0, 8, 2, 6, 4, 5, 5],
       // chart_data: [],
-      test_variable: []
+      test_variable: [],
+      toggle: true
     }
   },
   mounted() {
@@ -41,7 +43,8 @@ export default {
       // .historical[-1].close;
        // const dummy= this.stock_data["historicalStockList"][0]["historical"];
        // this.test_variable = dummy[dummy.length -1].close
-       this.chart_data = this.stock_data["historicalStockList"][0]["historical"];
+       console.log('test');
+       this.toggle = !this.toggle
 
     }
   }

@@ -11,13 +11,31 @@ export default {
     highcharts: Chart
   },
   data() {
+    // console.log("chart data in chartView",this.chart_data);
     return {
       // title: '',
       // points: [10, 0, 8, 2, 6, 4, 5, 5],
       // chartType: 'Spline',
       // seriesColor: '#6fcd98',
       // colorInputIsSupported: null,
-      chartOptions2: {
+      // chartOptions2: {
+      //   chart: {
+      //     type: 'bar'
+      //   },
+      //   title: {
+      //     text: 'Mikes chart'
+      //   },
+      //   series: [{
+      //     // data: this.chart_data,
+      //     color: 'red'
+      //   }]
+      // }
+    }
+  },
+  computed: {
+    chartOptions2: function(){
+      const chartData =
+      {
         chart: {
           type: 'bar'
         },
@@ -29,7 +47,10 @@ export default {
           color: 'red'
         }]
       }
+
+      return chartData
     }
+
   }
 }
 </script>
