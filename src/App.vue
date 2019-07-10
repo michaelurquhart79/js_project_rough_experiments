@@ -32,7 +32,7 @@ export default {
       fetch('https://financialmodelingprep.com/api/v3/historical-price-full/AAPL,GOOG,CMCSA?serietype=line')
       .then(res => res.json())
       // .then(data => this.chart_data=data["historicalStockList"][0]["historical"])
-      .then(data => this.chart_data=[3,5,7,3,6])
+      // .then(data => this.chart_data=[3,5,7,3,6])
 
 
     // fetch
@@ -45,6 +45,7 @@ export default {
        // this.test_variable = dummy[dummy.length -1].close
        console.log('test');
        this.toggle = !this.toggle
+       this.chart_data = this.chart_data.map(x => Math.random() * 10)
 
     }
   }
