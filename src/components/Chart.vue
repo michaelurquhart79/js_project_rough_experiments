@@ -39,6 +39,9 @@ export default {
         chart: {
           type: 'bar'
         },
+        yAxis: [{
+          max: 10
+        }],
         title: {
           text: 'Mikes chart'
         },
